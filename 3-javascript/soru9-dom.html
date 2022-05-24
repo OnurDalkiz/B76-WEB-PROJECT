@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <input type="number" id="Sayi">
+    <input type="button" value="Try" onclick="Try()">
+
+    <h3 id="Sonuc"></h3>
+
+
+    <script>
+    function Try()
+    {
+    
+    let random = Math.floor(Math.random() * 10) + 1;
+
+    console.log(random);
+
+    if(random == document.querySelector("#Sayi").value){
+
+        document.querySelector("#Sonuc").innerText = "Dogru Cevap";
+
+    }else{
+
+        document.querySelector("#Sonuc").innerText = "Tekrar Deneyiniz";
+
+    }
+    }
+
+
+    </script>
+</body>
+</html>

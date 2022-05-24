@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+      .darkMode{
+        
+        background-color: black;
+        color: white;
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+   <input type="button" id="btnGonder" value="Dark Mode" onclick="ModDegis()"> 
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, reprehenderit voluptate. Obcaecati sapiente modi voluptatibus consectetur eius adipisci temporibus, aut soluta inventore hic optio veritatis quam nemo, tempora facere officia.
+    Sunt iusto neque inventore enim ad molestiae minus esse velit maxime adipisci accusantium omnis modi quis libero vitae repellendus, iure assumenda, in magnam. Atque unde est labore illo tempora. Recusandae?
+    Voluptatibus, necessitatibus fuga. Fuga perferendis aliquam vero soluta assumenda dignissimos eum nihil, sapiente consectetur! Nobis adipisci quasi excepturi fugit quis totam reprehenderit autem, eius nam, ipsum culpa laudantium perferendis obcaecati.
+    Quia dolorum minima porro laboriosam explicabo autem itaque aliquid dolores nulla? Sed fuga corrupti, amet exercitationem animi laboriosam doloremque. Aspernatur fugiat alias soluta quaerat? Ducimus consequatur assumenda nam fuga libero.
+    Animi accusamus quisquam voluptatem, maiores molestias, numquam neque quos delectus minus culpa sint distinctio nemo esse placeat doloribus perferendis saepe architecto dicta doloremque, possimus error laboriosam. Nobis et voluptatibus libero?</p>
+    
+    <script>
+
+      let mod = "light";//dark
+      
+      function ModDegis(){
+        
+        if(mod == "light"){
+
+        document.querySelector("body").classList.add("darkMode");
+
+        document.querySelector("#btnGonder").value = "Light Mode";
+
+        mod = "dark";
+
+        }
+        else{
+
+        document.querySelector("body").classList.remove("darkMode");
+
+        document.querySelector("#btnGonder").value = "Dark Mode";
+
+        mod = "light";
+
+        }     
+      }
+
+      
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!--Birden fazla değeri aynı değişken içinde depolamak için
+    diziler kullanılır.-->
+
+    <!--Javascript'te diziler zero-based (sıfır tabanlı) dır.
+        (0'ıncı ındeks ten baslanır)-->
+
+        
+
+    <script> 
+        let not1 = 60;
+        let not2 = 50;
+        let not3 = 80;
+
+        //Değişkenleri böyle tek tek yazmak yerine, Arrays(Dizeler)'lere
+        //atama yapabiliriz
+
+        var kurslar = ["Javascript","HTML", "CSS", "Bootstrap"];
+
+        //                  0         1       2         3    indeksleri.
+
+        //[1] 1'inci indeks eleman.
+        console.log(kurslar[1]);
+        //Array'in tamamını alma.
+        console.log(kurslar);
+        //Array'in uzunlugunu alma.
+        console.log(kurslar.length);
+        //Array'in 0'ıncı indeks elemanının uzunlugunu alma.
+        console.log(kurslar[0].length);
+        //Array'in son elemanını alma.
+        console.log(kurslar[kurslar.length-1]);
+
+
+
+    </script>
+    
+</body>
+</html>

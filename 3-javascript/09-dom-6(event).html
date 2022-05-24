@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Suana kadar yazdigimiz tum kodlar dinamic ti.-->
+
+    <!--Onclick==> Olay tanimlama demektir. Her elementin icine belli 
+    olaylar tanimlanabilir. Kullanicinin yaptigi hareketleri ya da bastigi
+    butonu yakalamakta denebilir. Kullanicinin hareketlerine bagli hale
+    getirmek. Buna genel olarak "Event" denir.-->
+
+    <input type="text" id="txtAd" value="Isim, Soyisim" oninput="sayHello()" />
+
+    <!--oninput="sayHello()" kodu tarayicida veri girerken sonuc olarak
+    vermesini saglamak icin kullanilir. Google'da arama yaparken ayni anda
+    bize alt tarafta arama sonuclarini cikartmasi gibi!!!-->
+
+    <input type="button" id="btnGonder" value="Gonder" onclick="sayHello()"> 
+
+    <h4 id="baslik"></h4>
+
+    <script>
+      
+      //Function==>Apex'de method tanimlamayla aynidir. Suslu parantezler
+      //arasina kod'a tiklandiginda calismasini istedigimiz, kodlari
+      //yaziyoruz.
+
+      //Bu ornekte alttaki Function ustteki Onclick'e bagli calisir.
+
+      function sayHello(){
+
+        const elAd = document.querySelector("#txtAd");
+        const elBaslik = document.querySelector("#baslik");
+
+        //Form kullandigimiz icin "Value" kullanmaliyiz.
+
+        elBaslik.innerText = elAd.value;
+
+        //Bu kodlari en iyi bulabilecegimiz kaynak==>w3Schools
+
+      }
+
+      
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mavi{
+            color: navy;
+        }
+
+        .bg-Pembe{
+            background-color: pink;
+        }
+
+        .yaziTipi{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="yazi" class="mavi bg-Pembe">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+       Iusto, magnam. Nisi, eum id. Nulla fuga non neque voluptate 
+       laborum repellendus saepe corrupti ullam, amet, 
+       labore ipsum facere magnam sed necessitatibus. 
+    </div>    
+ 
+    <script>
+        
+        //classList===> Bir elementin sahip oldugu class'lari manipule
+        //etmek icin kullanilir.
+            //"add" class'a element eklemek icin kullanilir.
+            //"remove" class'dan element silmek icin kullanilir.
+
+      const elYazi = document.querySelector("#yazi");
+
+      //add() methodunu kullanirken "" ve noktasiz bir sekilde yazmaliyiz.
+
+      elYazi.classList.add("yaziTipi");
+
+      console.log(elYazi.classList);
+
+    </script>
+    
+</body>
+</html>

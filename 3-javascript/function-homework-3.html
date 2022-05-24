@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <!--ÖDEV4: Bir ile kendisine parametre olarak gonderilen sayi arasindaki, yine kendisine parametre olarak
+    gonderilen sayiya bolunebilen kac adet sayi oldugunu bulan fonksiyonu yaziniz.-->
+
+    <input type="number" min="0" id="sayi" placeholder="Number">
+
+    <input type="number" min="0" id="parameter" placeholder="Parameter">
+
+    <input type="button" id="calculate" value="Calculate" onclick="hesapla()">
+
+    <h3>Sonuc: <span id="sonuc"></span> </h3>
+
+<script>
+
+    function hesapla(){
+
+        let sayi = document.querySelector("#sayi").value;
+
+        let parameter = document.querySelector("#parameter").value;
+
+        const sonuc = pHesapla(sayi, parameter);
+
+        document.querySelector("#sonuc").innerHTML = sonuc;
+
+    }
+
+    function pHesapla(pSayi, pParameter){
+
+        let counter = 0;
+
+        for(let i = 1 ; i <= pParameter ; i++){
+
+            if(i%pSayi == 0){
+
+                counter++;
+
+            }
+
+            
+
+        }
+
+        return counter;
+
+    }
+
+    
+</script>
+
+    
+</body>
+</html>

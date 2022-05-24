@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Bir dizi içindeki en büyük sayı ile en küçük
+        sayı arasındaki farkı bulan programı yazınız.-->
+
+
+    <input type="button" value="Test2" onclick="test()">
+
+
+    <script> 
+            
+
+            function test(){
+
+            let notlar = [70, 56, 43, 23, 98, 67, 89, 56, 89, 93, 100, 100, 100];
+
+            const avg = getAvgNumber(notlar);
+
+            const avgUnder = getAvgUnder(notlar, avg);
+
+            alert(`Dizedeki sayilarin ortalamasi ${avg}, bu ortalamanin altinda ${avgUnder} adet sayi var.`);
+
+            }
+
+        function getAvgNumber(sayilar){
+
+            let sonuc = 0;
+
+            for(let i = 0 ; i < sayilar.length ; i++){
+
+                sonuc += sayilar[i];
+
+            }
+
+            sonuc = (sonuc / sayilar.length).toFixed(0);
+
+            //toFixed(0); methodu virgulden sonra kac basamak dondursun.
+
+            return sonuc;
+
+        }
+
+        function getAvgUnder(sayilar, avg){
+            
+            let counter = 0 ;
+            
+            for(let i = 0 ; i < sayilar.length ; i++){
+
+                if(sayilar[i] < avg){
+
+                    counter++;
+
+                }
+
+            }
+        
+            return counter;
+        
+        }
+
+        
+
+
+    </script>
+    
+</body>
+</html>

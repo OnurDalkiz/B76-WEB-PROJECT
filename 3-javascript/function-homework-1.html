@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<input type="text" id="not" placeholder="Notunuzu Giriniz">
+
+<input type="button" value="Calculate" onclick="hesapla()">
+
+<h3>Notunuz:<span id="sonuc"></span></h3>
+
+    <script> 
+
+    function hesapla(){
+
+        const not = document.querySelector("#not").value;
+
+        const sonuc = harfsistemi(not);
+
+        document.querySelector("#sonuc").innerHTML = sonuc;
+
+    }
+
+    function harfsistemi(not1){
+
+        not1 = Number(not1);
+
+        let sonuc = '';
+
+        if(not1<=100 && not1>90){
+
+            sonuc = 'A';
+
+        }else if(not1<=90 && not1>80){
+
+            sonuc = 'B';
+
+        }else if(not1<=80 && not1>70){
+
+            sonuc = 'C';
+
+        }else if(not1<=70 && not1>50){
+
+            sonuc = 'D';
+
+        }else if(not1<=50 && not1>=0){
+
+            sonuc = 'F';
+
+        }else{
+            alert("Lutfen 0-100 Arasi Deger Giriniz.");
+        }
+
+        return sonuc;
+
+    }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Soru:
+
+    500 ile 1000 arasinda 7 ile ve 3 ile tam bolunebilen sayilarin adedini ayri ayri
+    bulan programi yaziniz.-->
+
+    <input type="number" id="sayi1" min="0">
+    <!--oninput giris yapilirken gibi bir anlami var. Klavyeden bir deger girilmeye baslandiginda bu method devreye girecektir.-->
+    <input type="number" id="sayi2" min="0">
+    <input type="button" value="Calculate" onclick="hesapla()">
+
+    <h2 id="first"></h2><!-- //yediyebolunen -->
+    <h2 id="second"></h2><!-- //ucebolunen -->
+    <h2 id="third"></h2><!-- bolunemeyenler -->
+
+
+    <script>
+
+    function hesapla(){
+                
+        let yediyeBolunen = 0;
+
+        let uceBolunen = 0;
+
+        let bolunmeyenler = 0;
+
+        let sayi1 = Number(document.querySelector("#sayi1").value);
+
+        let sayi2 = Number(document.querySelector("#sayi2").value);
+
+        for(let i = sayi1 ; i <= sayi2 ; i++){
+
+            if(i % 7 == 0){
+
+                yediyeBolunen++;
+
+            }else if(i%3 == 0){
+
+                uceBolunen++;
+
+            }else{
+                
+                bolunmeyenler++;
+            
+            }
+        }
+
+        document.querySelector("#first").innerHTML = `Yediye Bolunenlerin Toplami:${yediyeBolunen}`;
+        document.querySelector("#second").innerHTML = `Uce Bolunenlerin Toplami:${uceBolunen}`;
+        document.querySelector("#third").innerHTML = `Yedi-Uce Bolunemeyenlerin Toplami:${bolunmeyenler}`;
+
+    }
+
+    </script>
+    
+</body>
+</html>

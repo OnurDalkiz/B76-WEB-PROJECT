@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Bir dizi içindeki en büyük sayıyı bulan programı yazınız.-->
+
+    <input type="button" value="Test1" onclick="test1()">
+
+    <input type="button" value="Test2" onclick="test2()">
+
+
+    <script> 
+
+        function test1(){
+
+            let sayilar = [12, 56, 14, 5, 1, 67, 89, 33, 22, 23];
+
+            let sonuc = getMaxNumber(sayilar);
+
+            alert(sonuc);
+
+        }
+
+            function test2(){
+
+            let notlar = [70, 56, 43, 23, 98, 67, 89, 56, 89, 93];
+
+            let sonuc = getMaxNumber(notlar);
+
+            if(sonuc==100){
+
+                alert("TEBRİKLER")
+
+            }
+
+            alert(sonuc);
+
+        }
+
+        //SORT yöntemi ile
+
+        function getMaxNumber(dizi){
+
+            dizi.sort();
+
+            return dizi[dizi.length-1];
+
+        }
+        
+
+    </script>
+    
+</body>
+</html>

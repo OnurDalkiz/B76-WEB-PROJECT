@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="first" min="0"><!--min="" burada minimum olabilecek degeri temsil eder.-->
+    <input type="number" id="second" min="0">
+
+    <input type="button" value="Hesapla" onclick="hesapla()">
+
+    <h3 id="sonuc"></h3>
+
+
+
+    <script>
+
+/*        1.Way(Not Recommended)
+        function hesapla(){
+
+            const sayi1 = document.querySelector("#first").value;
+
+            const Sayi2 = document.querySelector("#second").value;
+
+            let toplam = 0;
+
+            for(let i = sayi1 ; i <= Sayi2 ; i++){
+
+                if(i % 2 == 0){//"%" isareti apex'te math.mod() isleminin yaptigi, 
+                kalani bulma islemini gerceklestirir.
+
+                    toplam += Number(i);
+
+                }
+
+            }
+
+            document.querySelector("#sonuc").innerText = toplam;
+
+        } */
+
+        //2.Way(Best Way)
+
+                function hesapla(){
+
+            let sayi1 = Number(document.querySelector("#first").value);
+
+            let Sayi2 = Number(document.querySelector("#second").value);
+
+            let toplam = 0;
+
+            if(sayi1 % 2 != 0){
+
+                sayi1++;//49+1
+
+            }
+
+            for(let i = sayi1 ; i <= Sayi2 ; i+=2){
+
+                    toplam += i;
+
+                }
+
+                document.querySelector("#sonuc").innerText = toplam;
+
+            }
+
+    </script>
+    
+</body>
+</html>

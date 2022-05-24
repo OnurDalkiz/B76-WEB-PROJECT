@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--push() Methodu mevcut bir diziye yeni eleman eklemek icin kullanilir.
+
+        pop() Dizinin son elemanini dizi'den siler ve bu elemani dondurur.
+
+        splice() Diziye yeni ogeler ekler veya, mevcut ogeleri siler.Dizinin istedigimiz bir
+        yerinden veri silebilir veya birsey ekleyebiliriz.
+
+        reverse() Dizinin elemanlarini tersten siralar.
+
+        inncludes() Dizinin belirtilen bir elemani icerip icermedigine bakar.
+        Eger iceriyorsa true, icermiyorsa false dondurur.
+
+
+    -->
+
+
+    <script> 
+
+        const sayilar =[23,25,21,65, 5, 87,40];
+
+        console.log(sayilar);
+
+        let sonuc = sayilar.push(35);
+
+        console.log(sonuc);
+
+        //sonucunu goruntulemek icin bir degiskenin icine atama yapmaliyiz.
+
+        //push() komutu diziye eleman ekler ve kac elemanli hale geldigini yazdirir.
+
+        //Dizinin sonuna yeni bir eleman eklendi. -->
+
+        let sonuc1 = sayilar.pop();
+
+        console.log(sayilar);
+
+        console.log(sonuc1);
+
+        //pop() methodu burada son elemani sildi, degiskenin icine atadigimiz method ise
+        //silinen elemani bize geri dondurdu. -->
+
+        sayilar.splice(6);
+
+        console.log(sayilar);
+
+        //Tek parametre verdigimiz'de belirtilen indeks'den itibaren siler.
+        
+        sayilar.splice(3, 1);
+
+        console.log(sayilar);
+
+        //ikili parametre verdigimiz; belirtilen indeks'ten basla ve ikinci parametre miktari
+        //kadar silme islemi yap.
+
+        sayilar.splice(1, 1, 55, 77);
+
+        console.log(sayilar);
+
+        //ucuncu rakam dan sonra hep ekleme yapar.
+
+        //belirten indeks'ten itibaren siler ve eklemeler yapar.
+
+        sayilar.splice(4, 0, 99);
+
+        console.log(sayilar);
+
+        //belirtilen indeksten itibaren silmeden ekleme yapar.
+
+        sayilar.sort();
+
+        console.log(sayilar);
+
+        //sort() default olarak string siralama yapar.
+
+        //sort()methodunda sayilari siralama yaparken asagidaki yontemlerden birini 
+        //kullanmak zorundayiz.
+
+        //sort bir callback functinondur.(Advanced)
+
+        sayilar.sort( function(a,b){
+            return a-b;//negatif ,pozitif, sifir
+        })
+
+        console.log(sayilar);
+
+        //kucukten buyuge numeric siralama.
+
+        sayilar.sort( function(a,b){
+            return b-a;//negatif ,pozitif, sifir
+        })
+
+        //console.log(sayilar);
+
+        //Buyukten kucuge numeric siralama.
+
+        sayilar.reverse();
+
+        console.log(sayilar)
+
+        //String duzeyinde ters siralar
+
+        sonuc = sayilar.includes(55, 3);
+
+        console.log(sonuc);
+
+        sonuc = sayilar.includes(155);
+
+        console.log(sonuc);
+
+        //Dizide bir elemanin var olup olmadigini kontrol eder.
+
+        //Ikinci parametre opsiyoneldir, ikinci parametre girilirse O indeksten itibaren
+        //bak demektir. From Indeks parametresidir.
+
+    </script>
+    
+</body>
+</html>

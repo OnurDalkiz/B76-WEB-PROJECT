@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<!--
+
+1)Fonksiyonlar belli amaclar icin olusturulmus, kendi kendine
+yetebilen kod bloklaridir.
+
+2)Genellikle disaridan bir data alir, onu isler ve
+cagrildigi yere geri gonderir.
+
+3)Fonksiyonlari bir kere tanimlanip her yerden cagrilabilir.
+
+4)Kod tekrarlarinin onune gecmek icin kullanilir.
+
+-->
+
+<!--"Merhaba" yazan bir fonksiyon olusturunuz.-->
+
+<input type="button" value="Merhaba" onclick="sayHello()">
+<!--Ayni Methodu baska yerden de cagirabiliriz. Amac kod
+tekrarini onlemek.-->
+<input type="button" value="Merhaba2" onclick="sayHello()">
+
+    <script> 
+
+    function sayHello(){
+
+        alert("Hello"); 
+
+    }
+
+    </script>
+    
+</body>
+</html>

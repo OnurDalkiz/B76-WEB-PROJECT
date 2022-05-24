@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <!--ÖDEV2: Kendisine gönderilen metin içindeki boşlukların sayısını bulan foksiyon-->
+
+<input type="text" id="space" placeholder="Metni Giriniz">
+
+<input type="button" value="Calculate" onclick="bosluk()">
+
+<h3>Kac Adet Bosluk Bulunuyor:<span id="sonuc"></span></h3>
+
+    <script> 
+
+    function bosluk(){
+
+        const bosluk = document.querySelector("#space").value;
+
+        const sonuc = boslukbul(bosluk);
+
+        document.querySelector("#sonuc").innerHTML = sonuc;
+
+    }
+
+    function boslukbul(metin){
+
+        let sonuc = 0;
+        
+        for(let i = 0 ; i < metin.length ; i++ ){
+
+            if(metin.substring(i, i+1) == ' '){
+
+                sonuc++;
+
+            }
+
+        }
+
+        return sonuc;
+
+    }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <input type="number" id="first">
+    <input type="number" id="second">
+    <input type="button" value="Olustur" onclick="matris()">
+    <br>
+    <span id="matris1"></span>
+
+    <script>
+
+    function matris(){
+
+        let height = document.querySelector("#first").value;//6
+        
+        let width = document.querySelector("#second").value;//6
+
+        let star = '';
+
+        let middle =width/2;//2,5
+
+        let counter = 1;//0
+
+        for(let i = 1 ; i <= height ; i++){//2
+
+            for(let k = 1 ; k <= width ; k++){
+                
+                if(k < middle){
+                    
+                    star += '<span style="color: white">*</span>';
+                    
+                }else if(counter<=i){
+
+                    star += "*";
+
+                    counter++;
+   
+                }else{
+
+                    star += '<span style="color: white">*</span>';
+
+                }
+            }
+
+            counter -= i*2;
+
+            middle--;
+                        //satir sonu
+            star += '<br>';
+        }
+
+    document.querySelector("#matris1").innerHTML = star;
+            
+    }
+
+            
+            
+    
+
+        
+    
+        
+
+    </script>
+    
+</body>
+</html>

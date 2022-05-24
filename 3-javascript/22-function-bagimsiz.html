@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<input type="number" id="firstNumber" min="0" placeholder="Birinci Sayi">
+
+<input type="number" id="secondNumber" min="0" placeholder="Ikinci Sayi">
+
+<input type="button" value="Hesapla" onclick="clickHesapla()">
+
+<h3 id="sonuc"></h3>
+
+    <script> 
+
+    function clickHesapla(){//Bagimli event function
+
+        const sayi1 = document.querySelector("#firstNumber").value;
+
+        const sayi2 = document.querySelector("#secondNumber").value;
+
+        const sonuc  = topla(Number(sayi1), Number(sayi2));       
+        
+        document.querySelector("#sonuc").innerHTML = `Sonuc: ${sonuc}`;
+
+    }
+
+    function topla(s1, s2){//Bagimsiz function, hicbir method ya da 
+        //function a bagli degil.
+
+
+        const sonuc = s1 + s2;
+
+        return sonuc;
+
+
+
+    }
+
+    </script>
+    
+</body>
+</html>

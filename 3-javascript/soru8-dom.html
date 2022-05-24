@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="Sayi1" value="Sayi1">
+    
+    <input type="number" id="Sayi2" value="Sayi2">
+
+    <input type="button" value="Topla" onclick="Toplama()">
+
+    <h3>Sonuc: <span id="Sonuc"></span> </h3>
+
+    <script>
+
+        function Toplama(){
+
+         let sayi1 = document.querySelector("#Sayi1").value;
+
+        let sayi2 = document.querySelector("#Sayi2").value;
+
+        document.querySelector("#Sonuc").innerText = Number(sayi1) + Number(sayi2);
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+
+    1)Dongunun ne kadar donecegi dongu blogunun icindeki kodlara bagli ise 
+    bu durumda while donguleri kullanilabilir.
+
+    2)while ile do-while loop arasindaki fark, kontrol mekanizmasinin yeridir.
+
+    3)Do-while ile kontrol sonda oldugu icin dongu icindeki kodlar en 
+    az bir kere icra edilir.-->
+
+    <!--100 ile 200 arasindaki sayilar sirayla toplanmaya baslandiginda, 
+    genel toplami 2000'i ulastiran
+    kac adet sayi oldugunu bulan programi yapiniz-->
+
+    <h1 id="sonuc"></h1>
+
+    <input type="button" value="Tikla" onclick="tickle()" />
+
+    <script>
+      function tickle() {
+        let i = 100;
+
+        let empty = 0;
+
+        while (i < 200) {
+          if (empty < 2000) {
+            empty += i;
+
+            i++;
+          } else {
+            i -= 100;
+
+            break;
+          }
+        }
+
+        document.querySelector("#sonuc").innerText = i;
+      }
+    </script>
+  </body>
+</html>
